@@ -6,7 +6,7 @@ import OCLogo from './OCLogo.png';
 const logo = () => {
     return (
         <Box display="flex" justifyContent="center" py="4">
-            <Image src={OCLogo} alt="Optical Cinique logo" width="250px" height="100px" objectFit="contain"/>
+            <Image src={OCLogo} alt="Optical Cinique logo" width="230px" height="100px"/>
         </Box>
     )
 }

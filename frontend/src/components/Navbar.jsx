@@ -9,15 +9,15 @@ const navbar = () => {
             justifyContent="space-between"
             
         >
-            <ButtonGroup size="lg" variant="ghost" gap="10">
+            <ButtonGroup ml="5" size="lg" variant="ghost" gap="5">
                 <Button colorPalette="blue">Our Services</Button>
                 <Button colorPalette="blue">Glasses Features</Button>
                 <Button colorPalette="blue">Our Team</Button>
                 <Button colorPalette="blue">About Us</Button>
             </ButtonGroup>
             <ButtonGroup size="lg" gap="5">
-                <Button colorPalette="blue">Request Appointment</Button>
-                <Button colorPalette="blue">Order Contacts</Button>
+                <Button colorPalette="blue" rounded="full">Request Appointment</Button>
+                <Button colorPalette="blue" rounded="full">Order Contacts</Button>
             </ButtonGroup>
         </Flex>
     </Container>
