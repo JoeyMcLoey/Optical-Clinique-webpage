@@ -1,7 +1,7 @@
 import { Box, Container, Flex } from '@chakra-ui/react';
 import React from 'react';
 import { Image } from '@chakra-ui/react';
-import OCLogo from './OCLogo.png';
+import OCLogo from '../components/images/OCLogo.png';
 
 const logo = () => {
     return (
