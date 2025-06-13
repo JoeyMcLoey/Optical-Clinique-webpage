@@ -10,7 +10,9 @@ const navbar = () => {
             
         >
             <ButtonGroup ml="5" size="lg" variant="ghost" gap="5">
-                <Button colorPalette="blue">Our Services</Button>
+                <a href="#services" style={{ scrollBehavior: 'smooth' }}>
+                    <Button colorPalette="blue">Our Services</Button>
+                </a>
                 <Button colorPalette="blue">Glasses Features</Button>
                 <Button colorPalette="blue">Our Team</Button>
                 <Button colorPalette="blue">About Us</Button>

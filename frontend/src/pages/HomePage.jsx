@@ -68,6 +68,11 @@ const HomePage = () => {
                 </Box>
             </Box>
         </Box>
+        <Box id="services" marginTop="10">
+            <Text fontWeight="bold" fontSize="3xl" color="rgb(20, 62, 217)">
+                Our Services
+            </Text>
+        </Box>
     </Box>
   )
 }

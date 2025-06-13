@@ -3,16 +3,21 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Logo from "./components/Logo";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, []);
+  
   return (
-    <Box minH={"100vh"}>
-      <Logo />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </Box>
+      <Box minH={"100vh"}>
+        <Logo />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Box>
   )
 }
 
