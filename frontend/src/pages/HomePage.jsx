@@ -121,10 +121,27 @@ const HomePage = () => {
                 </Box>
             </Box>    
         </Box>
-        <Box id="features">
+        <Box id="features" display="flex" justifyContent="center" flexDirection="column" textAlign="center">
             <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
                 GLASSES FEATURES
             </Text>
+            <Grid templateColumns="repeat(3, 1fr)" gap="5">
+                <Box m="5">
+                    <Image />
+                    <Text fontWeight="bold" fontSize="2xl">HIGH INDEX LENSES</Text>
+                    <Text fontSize="lg"> <br /> Helps reduce the thickness and weight of your glasses by more than 50% making them look and feel better</Text>
+                </Box>
+                <Box m="5">
+                    <Image />
+                    <Text fontWeight="bold" fontSize="2xl">TRANSITION LENSES</Text>
+                    <Text fontSize="lg"> <br /> Light sensitive, shade changing lenses depending on UV light exposure, whilst offering 100% UV protection</Text>
+                </Box>
+                <Box m="5">
+                    <Image />
+                    <Text fontWeight="bold" fontSize="2xl">ANTI-REFLECTION</Text>
+                    <Text fontSize="lg"> <br /> Helps reduce light in situations like night driving or office work, whilst offering scratch resistance and a tougher lense</Text>
+                </Box>
+            </Grid>
         </Box>
     </Box>
   )
