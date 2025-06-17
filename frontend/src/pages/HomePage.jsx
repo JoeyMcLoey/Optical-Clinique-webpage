@@ -5,6 +5,7 @@ import OChomepage from '../components/images/OChomepage.jpg';
 import eyeTest from '../components/images/1eyeTest.jpg';
 import sunglass from '../components/images/2sunglass.jpg';
 import variety from '../components/images/3variety.jpg';
+import sEyeTest from '../components/images/Services-eyeTest.jpg';
 
 const HomePage = () => {
   return (
@@ -70,7 +71,7 @@ const HomePage = () => {
         </Box>
         <Box id="services" marginTop="10">
             <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
-                Our Services
+                OUR SERVICES
             </Text>
             <Box width="100vw" pl="40" pr="40">
                 <Grid templateColumns="repeat(3, 1fr)" gap="5">
@@ -103,6 +104,27 @@ const HomePage = () => {
                     </Box>
                 </Grid>
             </Box>
+            <Box m="120px" p="5" shadow="md" display="flex" justifyContent="center">
+                <Box width="50%" mr="40px">
+                    <Text fontWeight="bold" fontSize="2xl">
+                        WHEN WAS YOUR LAST EYE TEST?
+                    </Text>
+                    <Text fontSize="lg">
+                        <br /> If you are over 40, we recommend an eye test to ensure that you do not have early signs of eye diseases such as glaucoma. <br />
+                        <br /> Eye diseases in their early stages often have no noticeable symptoms. It is best to diagnose disease in its early stages to prevent permanent damage to your vision. <br />
+                        <br /> At Optical Clinique, we routinely test for glaucoma, macula degeneration, cataracts and other eye conditions. <br />
+                        <br /> Eye examinations are Bulk-billed to Medicare.
+                    </Text>
+                </Box>
+                <Box width="45%">
+                    <Image src={sEyeTest} borderRadius="xl"/>
+                </Box>
+            </Box>    
+        </Box>
+        <Box id="features">
+            <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
+                GLASSES FEATURES
+            </Text>
         </Box>
     </Box>
   )
