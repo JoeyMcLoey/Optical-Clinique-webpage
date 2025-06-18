@@ -19,7 +19,9 @@ const navbar = () => {
                 <a href="#ourTeam" style={{ scrollBehavior: 'smooth' }}>
                     <Button colorPalette="blue">Our Team</Button>
                 </a>
-                <Button colorPalette="blue">About Us</Button>
+                <a href="#aboutUs" style={{ scrollBehavior: 'smooth' }}> 
+                    <Button colorPalette="blue">About Us</Button>
+                </a>
             </ButtonGroup>
             <ButtonGroup size="lg" gap="5">
                 <Button colorPalette="blue" rounded="full">Request Appointment</Button>

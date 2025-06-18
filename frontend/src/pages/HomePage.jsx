@@ -231,6 +231,39 @@ const HomePage = () => {
                 </Box>
             </Box>
         </Box>
+        <Box id="aboutUs" display="flex" justifyContent="center" flexDirection="column" textAlign="center" width="70vw" mb="80px">
+            <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10" marginTop="80px">
+                ABOUT US
+            </Text>
+            <Box display="flex" justifyContent="space-between">
+                <Box width="70%">
+                    <Text fontWeight="bold" fontSize="2xl">LOCATION</Text>
+                    <Text fontSize="lg" mb="5">254 MerryLands Road, Merrylands NSW 2160</Text>
+                    <iframe
+                        width="100%"
+                        height="80%"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.0780685060263!2d150.98532428285392!3d-33.83609728102683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bd326a965739%3A0xb2b438989056d813!2sOptical%20Clinique!5e0!3m2!1sen!2sau!4v1750223900472!5m2!1sen!2sau"
+                        />
+                </Box>
+                <Box width="30%">
+                    <Text fontWeight="bold" fontSize="2xl">CONTACT US</Text>
+                    <Text fontSize="lg">
+                        <br /> Phone: (02) 9637 9699
+                        <br /> Fax: (02) 9637 6098
+                    </Text>
+                    <Text fontWeight="bold" fontSize="2xl"> <br />OPENING HOURS</Text>
+                    <Text fontSize="lg">
+                        <br /> Monday: 9am-5pm
+                        <br /> Tuesday: 9am-5pm
+                        <br /> Wednesday: 9am-5pm
+                        <br /> Thursday: 9am-7pm
+                        <br /> Friday: 9am-5pm
+                        <br /> Saturday: CLOSED
+                        <br /> Sunday: CLOSED
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
     </Box>
   )
 }
