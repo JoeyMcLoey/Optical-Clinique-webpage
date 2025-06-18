@@ -157,10 +157,79 @@ const HomePage = () => {
                     </Text>
                     <Text fontSize="xl">
                         <br /> Living in Australia, we are always exposed to UV radiation. This also means that even in winter months our eyes are susceptible to damage from the sun and this can lead to a number of eye diseases. <br />
-                        <br /> If you wear glasses, a pair of sunglasses can easily be made to your prescription. We feel very strongly about the importance of protecting your eyes throughout the year and for this reason we offer all Optical Clinique customers free UV protection on all lenses we dispense, even clear lenses. <br />
+                        <br /> If you wear glasses, a pair of sunglasses can easily be made to your prescription. We feel very strongly about the importance of protecting your eyes throughout the year and for this reason we offer all Optical Clinique customers free UV protection on all lenses we dispense, even clear lenses. <br />
                     </Text>
                 </Box>
             </Box> 
+        </Box>
+        <Box width="80vw" id="ourTeam" display="flex" justifyContent="center" flexDirection="column" textAlign="center" gap="80px">
+            <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
+                MEET OUR TEAM
+            </Text> 
+            <Box display="flex" justifyContent="center" flexDirection="row">
+                <Box width="50%" pl="5" pr="5">
+                    {/* <Image /> */}
+                    <Box bg="red" width="100%" height="100px"/>
+                </Box>
+                <Box width="50%" pl="5" pr="5">
+                    <Text fontWeight="semibold" fontSize="xl">Our Optometrist</Text>
+                    <Text fontSize="xl">Tony Fayed B. Optum (UNSW)</Text>
+                    <Text fontSize="lg">  
+                        <br /> Tony has over 20 years experience as an optometrist. He graduated from University of New South Wales in 1991and since then has been involved in Optometry practices in Sydney.<br />
+                        <br /> His practices always utilise sophisticated and state of the art technology to help him provide the best and most efficient care for his patients.<br />
+                        <br /> Tony is a well respected business owner in the community and strives to build relationships with his clientele.<br />
+                        <br /> In his down time, Tony is a proud family man who loves to spend time with his wife and children.
+                    </Text>
+                </Box>
+            </Box>
+            <Box display="flex" justifyContent="center" flexDirection="row">
+                <Box width="50%" pl="5" pr="5">
+                    {/* <Image /> */}
+                    <Box bg="red" width="100%" height="100px"/>
+                </Box>
+                <Box width="50%" pl="5" pr="5">
+                    <Text fontWeight="semibold" fontSize="xl">Our Optometrist</Text>
+                    <Text fontSize="xl">Tony Fayed B. Optum (UNSW)</Text>
+                    <Text fontSize="lg">  
+                        <br /> Tony has over 20 years experience as an optometrist. He graduated from University of New South Wales in 1991and since then has been involved in Optometry practices in Sydney.<br />
+                        <br /> His practices always utilise sophisticated and state of the art technology to help him provide the best and most efficient care for his patients.<br />
+                        <br /> Tony is a well respected business owner in the community and strives to build relationships with his clientele.<br />
+                        <br /> In his down time, Tony is a proud family man who loves to spend time with his wife and children.
+                    </Text>
+                </Box>
+            </Box>
+            <Box display="flex" justifyContent="center" flexDirection="row">
+                <Box width="50%" pl="5" pr="5">
+                    {/* <Image /> */}
+                    <Box bg="red" width="100%" height="100px"/>
+                </Box>
+                <Box width="50%" pl="5" pr="5">
+                    <Text fontWeight="semibold" fontSize="xl">Our Practice Manager / Optical Dispenser</Text>
+                    <Text fontSize="xl">Jennifer Borchan</Text>
+                    <Text fontSize="lg">
+                        <br />Jennifer has been working in the Optical field with Tony for 12 years.
+                        <br />She utlises her warm and friendly personality to assist Tony in providing superior customer service, striving to build relationships with the clientele.
+                        <br />She has gained a vast knowledge of the field and is able to assist with all of the clients needs; from a keen eye in frame selection to adjustments and repairs.
+                        <br />Jennifer is alsoin charge of administration and marketing
+                    </Text>
+                </Box>
+            </Box>
+            <Box display="flex" justifyContent="center" flexDirection="row">
+                <Box width="50%" pl="5" pr="5">
+                    {/* <Image /> */}
+                    <Box bg="red" width="100%" height="100px"/>
+                </Box>
+                <Box width="50%" pl="5" pr="5">
+                    <Text fontWeight="semibold" fontSize="xl">Our Receptionist</Text>
+                    <Text fontSize="xl">Receptionist name</Text>
+                    <Text fontSize="lg">
+                        <br />Blah
+                        <br />Blah
+                        <br />Blah
+                        <br />Blah
+                    </Text>
+                </Box>
+            </Box>
         </Box>
     </Box>
   )
