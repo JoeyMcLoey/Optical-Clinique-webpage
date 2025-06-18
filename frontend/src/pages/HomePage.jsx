@@ -6,6 +6,11 @@ import eyeTest from '../components/images/1eyeTest.jpg';
 import sunglass from '../components/images/2sunglass.jpg';
 import variety from '../components/images/3variety.jpg';
 import sEyeTest from '../components/images/Services-eyeTest.jpg';
+import GFIndex from '../components/images/GFIndex.jpg';
+import GFReflection from '../components/images/GFReflection.jpg';
+import GFTransition from '../components/images/GFTransition.jpg';
+import GFUV from '../components/images/GFUV.jpg';
+
 
 const HomePage = () => {
   return (
@@ -126,22 +131,36 @@ const HomePage = () => {
                 GLASSES FEATURES
             </Text>
             <Grid templateColumns="repeat(3, 1fr)" gap="5">
-                <Box m="5">
-                    <Image />
-                    <Text fontWeight="bold" fontSize="2xl">HIGH INDEX LENSES</Text>
-                    <Text fontSize="lg"> <br /> Helps reduce the thickness and weight of your glasses by more than 50% making them look and feel better</Text>
+                <Box >
+                    <Image src={GFIndex}/>
+                    <Text mb="4" mt="4" fontWeight="bold" fontSize="2xl">HIGH INDEX LENSES</Text>
+                    <Text fontSize="lg">Helps reduce the thickness and weight of your glasses by more than 50% making them look and feel better</Text>
                 </Box>
-                <Box m="5">
-                    <Image />
-                    <Text fontWeight="bold" fontSize="2xl">TRANSITION LENSES</Text>
-                    <Text fontSize="lg"> <br /> Light sensitive, shade changing lenses depending on UV light exposure, whilst offering 100% UV protection</Text>
+                <Box >
+                    <Image src={GFTransition} />
+                    <Text  mb="4" mt="4" fontWeight="bold" fontSize="2xl">TRANSITION LENSES</Text>
+                    <Text fontSize="lg">Light sensitive, shade changing lenses depending on UV light exposure, whilst offering 100% UV protection</Text>
                 </Box>
-                <Box m="5">
-                    <Image />
-                    <Text fontWeight="bold" fontSize="2xl">ANTI-REFLECTION</Text>
-                    <Text fontSize="lg"> <br /> Helps reduce light in situations like night driving or office work, whilst offering scratch resistance and a tougher lense</Text>
+                <Box >
+                    <Image src={GFReflection} />
+                    <Text  mb="4" mt="4" fontWeight="bold" fontSize="2xl">ANTI-REFLECTION</Text>
+                    <Text fontSize="lg">Helps reduce light in situations like night driving or office work, whilst offering scratch resistance and a tougher lense</Text>
                 </Box>
             </Grid>
+            <Box m="100px" p="5" shadow="md" display="flex" justifyContent="center">
+                <Box width="45%">
+                    <Image src={GFUV} borderRadius="xl"/>
+                </Box>
+                <Box width="50%" ml="40px" textAlign="justify">
+                    <Text fontWeight="bold" fontSize="2xl">
+                        UV PROTECTION FOR EYES
+                    </Text>
+                    <Text fontSize="xl">
+                        <br /> Living in Australia, we are always exposed to UV radiation. This also means that even in winter months our eyes are susceptible to damage from the sun and this can lead to a number of eye diseases. <br />
+                        <br /> If you wear glasses, a pair of sunglasses can easily be made to your prescription. We feel very strongly about the importance of protecting your eyes throughout the year and for this reason we offer all Optical Clinique customers free UV protection on all lenses we dispense, even clear lenses. <br />
+                    </Text>
+                </Box>
+            </Box> 
         </Box>
     </Box>
   )
