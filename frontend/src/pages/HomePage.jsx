@@ -235,7 +235,7 @@ const HomePage = () => {
             <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10" marginTop="80px">
                 ABOUT US
             </Text>
-            <Box display="flex" justifyContent="space-between">
+            <Box display="flex" justifyContent="space-between" shadow="md" p="20">
                 <Box width="70%">
                     <Text fontWeight="bold" fontSize="2xl">LOCATION</Text>
                     <Text fontSize="lg" mb="5">254 MerryLands Road, Merrylands NSW 2160</Text>

@@ -1,14 +1,26 @@
-import { Container, Flex, Box, ButtonGroup, Button } from '@chakra-ui/react'
+import { Container, Flex, Box, ButtonGroup, Button, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
+import AppointmentModal from './AppointmentModal';
+import ContactsModal from './ContactsModal';
 
 const navbar = () => {
-  return (
+    const {
+        isOpen: isContactsOpen,
+        onOpen: onContactsOpen,
+        onClose: onContactsClose,
+    } = useDisclosure();
+
+    const {
+        isOpen: isAppointmentsOpen,
+        onOpen: onAppointmentsOpen,
+        onClose: onAppointmentsClose,
+    } = useDisclosure();
+  
+    return (
     <Container maxW={"100%"}>
         <Flex
             h={10}
-            justifyContent="space-between"
-            
-        >
+            justifyContent="space-between">
             <ButtonGroup ml="5" size="lg" variant="ghost" gap="5">
                 <a href="#services" style={{ scrollBehavior: 'smooth' }}>
                     <Button colorPalette="blue">Our Services</Button>
@@ -24,10 +36,13 @@ const navbar = () => {
                 </a>
             </ButtonGroup>
             <ButtonGroup size="lg" gap="5">
-                <Button colorPalette="blue" rounded="full">Request Appointment</Button>
-                <Button colorPalette="blue" rounded="full">Order Contacts</Button>
+                <Button colorPalette="blue" rounded="full" onClick={onAppointmentsOpen}>Request Appointment</Button>
+                <Button colorPalette="blue" rounded="full" onClick={onContactsOpen}>Order Contacts</Button>
             </ButtonGroup>
         </Flex>
+
+        <AppointmentModal isOpen={isAppointmentsOpen} onClose={onAppointmentsClose} />
+        <ContactsModal isOpen={isContactsOpen} onClose={onContactsClose} />
     </Container>
   )
 }
