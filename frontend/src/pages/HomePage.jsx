@@ -42,7 +42,7 @@ const HomePage = () => {
         <Box p="5" display="flex" justifyContent="center" alignItems="center" flexDirection="column" width="100vw">
             <Box position="relative" margin="5">
                 <Image src={eyeTest} width="1200px" height="300px" borderRadius="xl" objectFit="cover"/>
-                <Box position="absolute" top="5px" right="5px" height="250px" width="300px" margin="5" borderRadius="lg" bg="rgba(255, 255, 255, 0.9)" p="5" display="flex" justifyContent="center" alignItems="center" flexDirection="column" p="10" textAlign="center">
+                <Box position="absolute" top="5px" right="5px" height="250px" width="300px" margin="5" borderRadius="lg" bg="rgba(255, 255, 255, 0.9)" display="flex" justifyContent="center" alignItems="center" flexDirection="column" p="10" textAlign="center">
                     <Text fontWeight="medium" fontSize="3xl" pb="5">
                         SOPHISTICATED EQUIPMENT
                     </Text>
@@ -53,7 +53,7 @@ const HomePage = () => {
             </Box>
             <Box position="relative" margin="5">
                 <Image src={sunglass} width="1200px" height="300px" borderRadius="xl"/>
-                <Box position="absolute" top="5px" left="5px" height="250px" width="300px" margin="5" borderRadius="lg" bg="rgba(255, 255, 255, 0.9)" p="5" display="flex" justifyContent="center" alignItems="center" flexDirection="column" p="10" textAlign="center">
+                <Box position="absolute" top="5px" left="5px" height="250px" width="300px" margin="5" borderRadius="lg" bg="rgba(255, 255, 255, 0.9)" display="flex" justifyContent="center" alignItems="center" flexDirection="column" p="10" textAlign="center">
                     <Text fontWeight="medium" fontSize="3xl" pb="5">
                         UP-TO-DATE STYLES
                     </Text>
@@ -64,7 +64,7 @@ const HomePage = () => {
             </Box>
             <Box position="relative" margin="5">
                 <Image src={variety} width="1200px" height="300px" borderRadius="xl"/>
-                <Box position="absolute" top="5px" right="5px" height="250px" width="300px" margin="5" borderRadius="lg" bg="rgba(255, 255, 255, 0.9)" p="5" display="flex" justifyContent="center" alignItems="center" flexDirection="column" p="10" textAlign="center">
+                <Box position="absolute" top="5px" right="5px" height="250px" width="300px" margin="5" borderRadius="lg" bg="rgba(255, 255, 255, 0.9)" display="flex" justifyContent="center" alignItems="center" flexDirection="column" p="10" textAlign="center">
                     <Text fontWeight="medium" fontSize="3xl" pb="5">
                         VAST RANGE OF FRAMES
                     </Text>
@@ -268,4 +268,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default HomePage;

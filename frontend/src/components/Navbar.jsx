@@ -1,26 +1,14 @@
-import { Container, Flex, Box, ButtonGroup, Button, useDisclosure } from '@chakra-ui/react'
-import React from 'react'
-import AppointmentModal from './AppointmentModal';
-import ContactsModal from './ContactsModal';
+import { Container, Flex, Box, ButtonGroup, Button } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
-const navbar = () => {
-    const {
-        isOpen: isContactsOpen,
-        onOpen: onContactsOpen,
-        onClose: onContactsClose,
-    } = useDisclosure();
-
-    const {
-        isOpen: isAppointmentsOpen,
-        onOpen: onAppointmentsOpen,
-        onClose: onAppointmentsClose,
-    } = useDisclosure();
+const Navbar = () => {      
+  const [isAppointmentOpen, setAppointmentOpen] = useState(false);
+  const [isContactsOpen, setContactsOpen] = useState(false);
   
-    return (
+  return (
     <Container maxW={"100%"}>
-        <Flex
-            h={10}
-            justifyContent="space-between">
+        <Flex h={10} justifyContent="space-between">
             <ButtonGroup ml="5" size="lg" variant="ghost" gap="5">
                 <a href="#services" style={{ scrollBehavior: 'smooth' }}>
                     <Button colorPalette="blue">Our Services</Button>
@@ -36,15 +24,24 @@ const navbar = () => {
                 </a>
             </ButtonGroup>
             <ButtonGroup size="lg" gap="5">
-                <Button colorPalette="blue" rounded="full" onClick={onAppointmentsOpen}>Request Appointment</Button>
-                <Button colorPalette="blue" rounded="full" onClick={onContactsOpen}>Order Contacts</Button>
+                <Button colorPalette="blue" rounded="full" onClick={() => setAppointmentOpen(true)}>Request Appointment</Button>
+                <Button colorPalette="blue" rounded="full" onClick={() => setContactsOpen(true)}>Order Contacts</Button>
             </ButtonGroup>
         </Flex>
 
-        <AppointmentModal isOpen={isAppointmentsOpen} onClose={onAppointmentsClose} />
-        <ContactsModal isOpen={isContactsOpen} onClose={onContactsClose} />
+        {/* Appointment Modal */}
+        <Modal isOpen={isAppointmentOpen} onClose={() => setAppointmentOpen(false)}>
+          <h2>Request Appointment</h2>
+          <p>Please call (02) 9637 9699 or visit us in-store to request an appointment.</p>
+        </Modal>
+
+        {/* Contacts Modal */}
+        <Modal isOpen={isContactsOpen} onClose={() => setContactsOpen(false)}>
+          <h2>Order Contacts</h2>
+          <p>To order contacts, please call (02) 9637 9699 or visit our clinic.</p>
+        </Modal>
     </Container>
   )
 }
 
-export default navbar
+export default Navbar;

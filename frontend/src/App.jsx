@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
@@ -11,7 +11,7 @@ function App() {
   }, []);
   
   return (
-      <Box minH={"100vh"}>
+      <Box width="100vw">
         <Logo />
         <Navbar />
         <Routes>
@@ -21,4 +21,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
