@@ -1,14 +1,12 @@
-import { Container, Flex, Box, ButtonGroup, Button } from '@chakra-ui/react';
+import { Container, Flex, ButtonGroup, Button } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import Modal from './Modal';
 import appointmentImage from '../components/images/ModalApt.jpg';
 import contactImage from '../components/images/ModalContacts.jpg';
-import emailjs from 'emailjs-com';
 
 const Navbar = () => {
   const [isAppointmentOpen, setAppointmentOpen] = useState(false);
   const [isContactsOpen, setContactsOpen] = useState(false);
-  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const inputStyle = {
     width: '100%',
@@ -32,52 +30,63 @@ const Navbar = () => {
 
   const sendAppointment = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      'service_339kk4r',
-      'template_hz2hyle',
-      e.target,
-      'VhMpQcXD1gLtYDeCq'
-    ).then(() => {
+    const formData = new FormData(e.target);
+
+    window.Email.send({
+      SecureToken: "95311a0b-8f29-4725-8134-9dfe2839612f",
+      To: "joseph.k20002@gmail.com",
+      From: formData.get("email"),
+      Subject: "New Appointment Request",
+      Body: `
+        <b>Full Name:</b> ${formData.get("name")}<br/>
+        <b>Email:</b> ${formData.get("email")}<br/>
+        <b>Phone:</b> ${formData.get("phone")}<br/>
+        <b>Date:</b> ${formData.get("date")}<br/>
+        <b>Time:</b> ${formData.get("time")}<br/>
+        <b>Notes:</b> ${formData.get("notes") || "N/A"}
+      `
+    }).then(() => {
       setAppointmentOpen(false);
       alert("Appointment request sent successfully!");
     }).catch((error) => {
-      alert("Failed to send appointment request. Please try again.");
       console.error(error);
+      alert("Failed to send appointment request. Please try again.");
     });
   };
 
   const sendContacts = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      'service_339kk4r',
-      'template_v6ariif',
-      e.target,
-      'VhMpQcXD1gLtYDeCq'
-    ).then(() => {
+    const formData = new FormData(e.target);
+
+    window.Email.send({
+      SecureToken: "95311a0b-8f29-4725-8134-9dfe2839612f",
+      To: "joseph.k20002@gmail.com",
+      From: formData.get("email"),
+      Subject: "New Contact Lens Order",
+      Body: `
+        <b>Full Name:</b> ${formData.get("name")}<br/>
+        <b>Email:</b> ${formData.get("email")}<br/>
+        <b>Phone:</b> ${formData.get("phone")}<br/>
+        <b>Supply Duration:</b> ${formData.get("supply")}<br/>
+        <b>Notes:</b> ${formData.get("notes") || "N/A"}
+      `
+    }).then(() => {
       setContactsOpen(false);
-      alert("Contact lens order request sent successfully!");
+      alert("Contact lens order sent successfully!");
     }).catch((error) => {
-      alert("Failed to send contact lens order request. Please try again.");
       console.error(error);
+      alert("Failed to send contact lens order. Please try again.");
     });
   };
 
   return (
-    <Container maxW={"100%"}>
+    <Container maxW="100%">
       <Flex h={10} justifyContent="space-between">
         <ButtonGroup ml="5" size="lg" variant="ghost" gap="5">
-          <a href="#services" style={{ scrollBehavior: 'smooth' }}>
-            <Button colorScheme="blue">Our Services</Button>
-          </a>
-          <a href="#features" style={{ scrollBehavior: 'smooth' }}>
-            <Button colorScheme="blue">Glasses Features</Button>
-          </a>
-          <a href="#ourTeam" style={{ scrollBehavior: 'smooth' }}>
-            <Button colorScheme="blue">Our Team</Button>
-          </a>
-          <a href="#aboutUs" style={{ scrollBehavior: 'smooth' }}>
-            <Button colorScheme="blue">About Us</Button>
-          </a>
+          <a href="#services"><Button colorScheme="blue">Our Services</Button></a>
+          <a href="#features"><Button colorScheme="blue">Glasses Features</Button></a>
+          <a href="#ourTeam"><Button colorScheme="blue">Our Team</Button></a>
+          <a href="#aboutUs"><Button colorScheme="blue">About Us</Button></a>
         </ButtonGroup>
         <ButtonGroup size="lg" gap="5">
           <Button colorScheme="blue" rounded="full" onClick={() => setAppointmentOpen(true)}>Request Appointment</Button>
