@@ -19,7 +19,7 @@ const HomePage = () => {
             <Text fontSize="5xl" fontWeight="semibold" marginBottom="5">
                 WELCOME TO OPTICAL CLINIQUE
             </Text>
-            <Image src={OChomepage} alt="Optical Cinique home page" width="70%" height="400px" borderRadius="xl"/>
+            <Image src={OChomepage} objectFit="cover" alt="Optical Cinique home page" width="70%" height="400px" borderRadius="xl"/>
             <Box width="70%" p="5" display="flex" justifyContent="space-between">
                 <Box margin="10">
                     <Text fontWeight="bold" fontSize="lg">
