@@ -11,14 +11,22 @@ function App() {
   }, []);
   
   return (
-      <Box width="100vw">
+      <Box w="100%">
         <Logo />
-        <Box position="sticky" top="0" zIndex="999" bg="white" paddingTop="5" paddingBottom="5">
+        <Box 
+             position="sticky" 
+             top="0" 
+             zIndex="1000" 
+             bg="white" 
+             paddingTop="5" 
+             paddingBottom="5">
           <Navbar />
         </Box>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
+        <Box overflowX="hidden"> 
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </Box>
       </Box>
   )
 }

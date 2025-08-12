@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <Box shadow="md" margin="5" p="5" display="flex" justifyContent="center" flexDirection="column" alignItems="center">
         <Box p="5" display="flex" justifyContent="center" alignItems="center" flexDirection="column" padding="5" margin="5" width="100vw">
-            <Text textStyle="5xl" fontWeight="semibold" marginBottom="5">
+            <Text fontSize="5xl" fontWeight="semibold" marginBottom="5">
                 WELCOME TO OPTICAL CLINIQUE
             </Text>
             <Image src={OChomepage} alt="Optical Cinique home page" width="70%" height="400px" borderRadius="xl"/>
@@ -74,7 +74,7 @@ const HomePage = () => {
                 </Box>
             </Box>
         </Box>
-        <Box id="services" marginTop="10">
+        <Box id="services" scrollMarginTop="100px" mt="10">
             <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
                 OUR SERVICES
             </Text>
@@ -126,7 +126,7 @@ const HomePage = () => {
                 </Box>
             </Box>    
         </Box>
-        <Box id="features" display="flex" justifyContent="center" flexDirection="column" textAlign="center">
+        <Box id="features" scrollMarginTop="100px" display="flex" justifyContent="center" flexDirection="column" textAlign="center">
             <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
                 GLASSES FEATURES
             </Text>
@@ -162,7 +162,7 @@ const HomePage = () => {
                 </Box>
             </Box> 
         </Box>
-        <Box width="80vw" id="ourTeam" display="flex" justifyContent="center" flexDirection="column" textAlign="center" gap="80px">
+        <Box width="80vw" id="ourTeam" scrollMarginTop="100px" display="flex" justifyContent="center" flexDirection="column" textAlign="center" gap="80px">
             <Text fontWeight="bold" fontSize="3xl" color="rgb(14, 49, 176)" p="5" display="flex" justifyContent="center" marginBottom="10">
                 MEET OUR TEAM
             </Text> 

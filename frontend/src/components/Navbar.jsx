@@ -83,13 +83,13 @@ const Navbar = () => {
   return (
     <Container maxW="100%">
       <Flex h={10} justifyContent="space-between">
-        <ButtonGroup ml="5" size="lg" variant="ghost" gap="5">
+        <ButtonGroup ml="10" size="lg" variant="ghost" gap="5">
           <a href="#services"><Button colorScheme="blue">Our Services</Button></a>
           <a href="#features"><Button colorScheme="blue">Glasses Features</Button></a>
           <a href="#ourTeam"><Button colorScheme="blue">Our Team</Button></a>
           <a href="#aboutUs"><Button colorScheme="blue">About Us</Button></a>
         </ButtonGroup>
-        <ButtonGroup size="lg" gap="5">
+        <ButtonGroup size="lg" gap="5" mr="10">
           <Button colorScheme="blue" rounded="full" onClick={() => setAppointmentOpen(true)}>Request Appointment</Button>
           <Button colorScheme="blue" rounded="full" onClick={() => setContactsOpen(true)}>Order Contacts</Button>
         </ButtonGroup>
